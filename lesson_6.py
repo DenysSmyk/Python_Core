@@ -51,7 +51,7 @@
 #     sum=0
 #     for i in inp:
 #         sum+=int(i)
-#     print(sum)
+#     return sum
 # print(sum_n())
 
 
