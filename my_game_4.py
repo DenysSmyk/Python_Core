@@ -1,21 +1,21 @@
 import pygame
 
 pygame.init()
-screen = pygame.display.set_mode((500, 500))
-pygame.display.set_caption("My first game")
-# clock = pygame.time.Clock()
-
-x = 500
-y = 400
-width = 40
-height = 60
-vol = 5
-
-run = True
+screen = pygame.display.set_mode((1500, 900))
+pygame.display.set_caption("My plane")
 clock = pygame.time.Clock()
 
+x = 700
+y = 450
+width = 40
+height = 60
+vol = 15
+
+run = True
+#clock = pygame.time.Clock()
+
 while run:
-    pygame.time.delay(100)
+    pygame.time.delay(1)
 
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
@@ -23,16 +23,16 @@ while run:
 
     keys = pygame.key.get_pressed()
 
-    if keys[pygame.K_LEFT] and x > vol:
+    if keys[pygame.K_LEFT] and x > 530:
         x = x - vol
-    if keys[pygame.K_RIGHT] and x < 500 - width - vol:
+    if keys[pygame.K_RIGHT] and x < 1500:
         x = x + vol
-    if keys[pygame.K_UP] and y > vol:
+    if keys[pygame.K_UP] and y > 380:
         y = y - vol
-    if keys[pygame.K_DOWN] and y < 500 - height -vol:
+    if keys[pygame.K_DOWN] and y < 1000:
         y = y + vol
 
-    # without trace
+    #without trace
     screen.fill((0, 0, 0))
 
     plane_surf = pygame.image.load('img/plane.png')
