@@ -51,15 +51,17 @@
 # А тоді створити клас працівник, який наслідується від класу особи і містить метод details,
 # який на вхід отримує параметр про компанію, в якій працює працівник і цей метод виводить інформацію про те,
 # що працівник з таким то іменем працює в такій то компанії.
-
 # class Person():
 #     def __init__(self, name, age):
-#         self.__name = name
-#         self.__age = age
+#         self.name = name
+#         if age > 0:
+#             self.age = age
+#         else:
+#             print("")
 #
 #     @property
 #     def p_name(self):
-#         return self.__name
+#         return self.name
 #
 #     @property
 #     def age(self):
@@ -73,51 +75,9 @@
 #             print("Age is incorrect")
 #
 #     def info(self):
-#         print("User name is {}. He is {} year old.".format(self.__name, self.__age))
-#
-# den = Person("Den", 19)
-# den.age =-34
-# den.info()
-#
-# class Worker(Person):
-#     def __init__(self, __name, __age):
-#         super(Worker, self).__init__(__name, __age)
-#
-#     def details(self, company):
-#         print("{} working in {}".format(self.__name, company))
-#
-# w_den = Worker("Den", 19)
-# w_den.details('Soft Serve')
-
-
-
-
-#######################################################################################################################
-
-# class Person():
-#     def __init__(self, name, age):
-#         self.name = name
-#         self.age = age
-#
-#     # @property
-#     # def p_name(self):
-#     #     return self.__name
-#     #
-#     # @property
-#     # def age(self):
-#     #     return self.__age
-#     #
-#     # @age.setter
-#     # def age(self, age):
-#     #     if age in range(1, 100):
-#     #         self.__age = age
-#     #     else:
-#     #         print("Age is incorrect")
-#
-#     def info(self):
 #         print("User name is {}. He is {} year old.".format(self.name, self.age))
 #
-# den = Person("Den", 19)
+# den = Person("den", 19)
 # den.age =-34
 # den.info()
 #
